@@ -1,4 +1,4 @@
-package com.cg.sprintproject.entities;
+package com.cg.healthinsurance.entities;
 
 import java.time.LocalDate;
 

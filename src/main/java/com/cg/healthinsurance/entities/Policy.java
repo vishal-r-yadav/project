@@ -1,9 +1,9 @@
-package com.cg.sprintproject.entities;
+package com.cg.healthinsurance.entities;
 
 import java.time.LocalDate;
 
 public class Policy {
-	private String policyId;
+	private int policyId;
 	private String policyName;
 	private LocalDate startDate;
 	private LocalDate endDate ;
@@ -11,10 +11,10 @@ public class Policy {
 	private double price;
 	
 	
-	public String getPolicyId() {
+	public int getPolicyId() {
 		return policyId;
 	}
-	public void setPolicyId(String policyId) {
+	public void setPolicyId(int policyId) {
 		this.policyId = policyId;
 	}
 	
