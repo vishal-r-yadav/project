@@ -1,0 +1,57 @@
+   CREATE TABLE USER_DTLS
+  ( 
+    USER_ID INT NOT NULL,
+    USER_NAME VARCHAR(30) NOT NULL,
+    EMAIL VARCHAR(30) UNIQUE NOT NULL,
+    PASSWORD VARCHAR(30) NOT NULL,
+    ROLE VARCHAR(30) NOT NULL, 
+    MOBILE_NO VARCHAR(10)UNIQUE NOT NULL,
+    SALARY VARCHAR NOT NULL, 
+    DATE_OF_BIRTH DATE NOT NULL,
+
+    PRIMARY KEY(USER_ID)
+  );
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE POLICY_DTLS
+ ( 
+   POLICY_ID INT NOT NULL,
+   POLICY_NAME VARCHAR(30) NOT NULL,
+   POLICY_PRICE FLOAT NOT NULL,
+   POLICY_EFFECTIVE_DATE DATE NOT NULL , 
+   POLICY_END_DATE DATE NOT NULL,
+   POLICY_TERM INT NOT NULL, 
+   POLICY_CREATED_BY VARCHAR(30) NOT NULL,
+
+   PRIMARY KEY(POLICY_ID)
+ ); 
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE POLICY_HOLDER_DTLS
+( 
+  POLICY_HOLDER_ID INT NOT NULL, 
+  POLICY_HOLDER_NAME VARCHAR(30) NOT NULL, 
+  POLICY_NAME VARCHAR(30)NOT NULL, 
+  PREMIUM_TYPE FLOAT NOT NULL, 
+  DATE_OF_BIRTH DATE NOT NULL, 
+  ANNUAL_INCOME FLOAT NOT NULL, 
+  START_DATE DATE NOT NULL,
+  END_DATE DATE NOT NULL, 
+  TRANSCATION_ID INT NOT NULL, 
+  TRANSCATION_DATE DATE NOT NULL, 
+
+  CONSTRAINT policy_dtls_pkeyPRIMARY KEY(POLICY_HOLDER_ID)
+);
+----------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE TRANSACTION_DTLS
+  ( 
+    TRANSACTION_ID INT NOT NULL, 
+    AMOUNT FLOAT NOT NULL, 
+    PAY_DATE DATE NOT NULL,
+
+    PRIMARY KEY (TRANSACTION_ID)
+  );
