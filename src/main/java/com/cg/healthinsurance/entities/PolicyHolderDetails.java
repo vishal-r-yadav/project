@@ -2,17 +2,31 @@ package com.cg.healthinsurance.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="policy_holder_dtls")
 public class PolicyHolderDetails {
-	
+	@Id
+	@Column(name="policy_holder_id")
 	private String policyHolderId;
+	@Column(name="policy_holder_name")
 	private String holderName;
+	@Column(name="policy_name")
 	private String policyName;
+	@Column(name="premium_type")
 	private String premiumType;
-	private LocalDate dateOfBirth;
-	private double annualIncome;
-	private LocalDate startDate;
-	private LocalDate endDate;
 	
+	@Column(name="policy_annual_income")
+	private double annualIncome;
+	@Column(name="start_date")
+	private LocalDate startDate;
+	@Column(name="end_date")
+	private LocalDate endDate;
+	@Column(name="transaction_id")
+	private int transactionId;
 	
 	
 	//private User user;
@@ -46,12 +60,7 @@ public class PolicyHolderDetails {
 	public void setPremiumType(String premiumType) {
 		this.premiumType = premiumType;
 	}
-	public LocalDate getDateOfBirth() {
-		return dateOfBirth;
-	}
-	public void setDateOfBirth(LocalDate dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+	
 	public double getAnnualIncome() {
 		return annualIncome;
 	}
@@ -70,6 +79,13 @@ public class PolicyHolderDetails {
 	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
+	public int getTransactionId() {
+		return transactionId;
+	}
+	public void setTransactionId(int transactionId) {
+		this.transactionId = transactionId;
+	}
+	
 	
 	
 	

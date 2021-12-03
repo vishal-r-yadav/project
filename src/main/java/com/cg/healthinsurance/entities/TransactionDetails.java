@@ -2,10 +2,21 @@ package com.cg.healthinsurance.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="transaction_dtls")
 public class TransactionDetails {
+	@Id
+	@Column(name="transaction_id")
 	private int transactionId;
+	@Column(name="amount")
 	private double amount;
+	@Column(name="pay_date")
 	private LocalDate paymentDate;
+	
 	public int getTransactionId() {
 		return transactionId;
 	}
