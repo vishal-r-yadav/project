@@ -5,12 +5,12 @@ import com.cg.healthinsurance.entities.User;
 
 public class LogInServiceImpl implements LogInService {
 private UserDao userDao;
-	@Override
-	public void addNewUser(User user) {
-		userDao.addNewUser(user);
-		
-	
-	}
+
+@Override
+public User addNewUser(User user) {
+	// TODO Auto-generated method stub
+	return null;
+}
 
 	@Override
 	public User signIn(User user) {
@@ -23,5 +23,7 @@ private UserDao userDao;
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 
 }

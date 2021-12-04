@@ -1,5 +1,7 @@
 package com.cg.healthinsurance.dao;
 
-public class TransactionDao {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TransactionDao extends JpaRepository {
 
 }
